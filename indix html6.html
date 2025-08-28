@@ -1,0 +1,61 @@
+<div class="copyright">
+                <p>&copy; 2023 KinoOlam. Barcha huquqlar himoyalangan.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Simple JavaScript for category filtering
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.category-filters button');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    // Here would be the actual filtering logic
+                    console.log('Filter by: ' + this.textContent);
+                });
+            });
+            
+            // Search functionality
+            const searchBox = document.querySelector('.search-box input');
+            const searchButton = document.querySelector('.search-box button');
+            
+            searchButton.addEventListener('click', function() {
+                performSearch();
+            });
+            
+            searchBox.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    performSearch();
+                }
+            });
+            
+            function performSearch() {
+                const searchTerm = searchBox.value.trim();
+                if (searchTerm !== '') {
+                    alert('Qidiruv so\'rovi: ' + searchTerm);
+                    // Actual search implementation would go here
+                }
+            }
+            
+            // Video player functionality
+            const videoPlayer = document.querySelector('video');
+            if (videoPlayer) {
+                videoPlayer.addEventListener('play', function() {
+                    console.log('Video started playing');
+                });
+                
+                videoPlayer.addEventListener('pause', function() {
+                    console.log('Video paused');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

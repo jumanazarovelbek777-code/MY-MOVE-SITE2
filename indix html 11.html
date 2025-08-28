@@ -1,0 +1,137 @@
+list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: #e50914;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: #2c2c2c;
+            border-radius: 50%;
+            color: #fff;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        
+        .social-icons a:hover {
+            background: #e50914;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #2c2c2c;
+            color: #777;
+            font-size: 14px;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 992px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            nav ul {
+                margin: 15px 0;
+            }
+            
+            .search-box {
+                width: 100%;
+                max-width: 400px;
+            }
+            
+            .hero-content h2 {
+                font-size: 36px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 5px 10px;
+            }
+            
+            .hero {
+                height: 400px;
+            }
+            
+            .hero-content h2 {
+                font-size: 28px;
+            }
+            
+            .hero-content p {
+                font-size: 16px;
+            }
+            
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header section -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-play-circle"></i>
+                    <h1>MediaMarkaz</h1>
+                </div>
+                
+                <nav>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-home"></i> Bosh sahifa</a></li>
+                        <li><a href="#"><i class="fas fa-film"></i> Filmlar</a></li>
+                        <li><a href="#"><i class="fas fa-tv"></i> Seriallar</a></li>
+                        <li><a href="#"><i class="fas fa-music"></i> Musiqa</a></li>
+                        <li><a href="#"><i class="fas fa-image"></i> Rasmlar</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="search-box">
+                    <input type="text" placeholder="Qidirish...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Hero section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>O'zbekistonning eng yirik media markazi</h2>
+            <p>Bizda siz uchun eng yangi filmlar, seriallar, musiqalar va videolar to'plami. O'zingizga yoqgan kontentni toping va tomosha qiling!</p>
+            <a href="#" class="btn">Hoziroq ko'rish</a>
+        </div>
+    </section>
+    
+    <!-- Main content -->
+    <main class="container">
+        <!-- Categories section -->
